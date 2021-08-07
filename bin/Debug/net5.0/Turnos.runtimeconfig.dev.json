@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sofir\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sofir\\.nuget\\packages"
+    ]
+  }
+}
