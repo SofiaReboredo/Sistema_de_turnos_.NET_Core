@@ -1,22 +1,25 @@
 @model Turnos.Models.Especialidad
 
-<h3>¿Esta usted seguro de eliminar el siguiente registro?</h4>
-<div>
-    <dl>
-        <dt>
-            @Html.DisplayNameFor(modelo => modelo.Descripcion)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Descripcion)
-        </dd>
-    </dl>
-    <form asp-action = "Delete">
-        <input type="hidden" asp-form = "IdEspecialidad"/>
-        <input type="submit" value= "Eliminar"/>
-    </form>
+<h4>¿Esta seguro de eliminar el siguiente registro?</h4>
     <div>
-        <a asp-action="Index">Volver
-            
-        </a>
+        <h5>Médico</h5>
+        <hr />
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card hoverable blue darken-1">
+                    <div class="card-content white-text">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Descripcion): @Html.DisplayFor(model => model.Descripcion)
+                        </dt>
+                    </div>
+                    <div class="card-action blue-grey darken-2">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="IdEspecialidad" />
+                            <input type="Submit" value="Eliminar" class="waves-effect waves-light btn-small orange lighten-2"/>
+                            <a asp-action="Index" class="right">Volver</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
