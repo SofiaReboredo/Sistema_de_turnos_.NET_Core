@@ -176,5 +176,17 @@ namespace Turnos.Controllers
         {
             return _context.Medico.Any(e => e.IdMedico == id);
         }
+        public string TraerHorarioAtencionDesde (int idMedico)
+        {
+            var HorarioAtentionDesde = _context.Medico.Where(m => m.IdMedico == idMedico).FirstOrDefault().HorarioAtencionDesde;
+            return HorarioAtentionDesde.Hour + ":" + HorarioAtentionDesde.Minute;
+        }
+
+        public string TraerHorarioAtencionHasta (int idMedico)
+        {
+            var HorarioAtentionHasta = _context.Medico.Where(m => m.IdMedico == idMedico).FirstOrDefault().HorarioAtencionHasta;
+            return HorarioAtentionHasta.Hour + ":" + HorarioAtentionHasta.Minute;
+        }
     }
+    
 }
