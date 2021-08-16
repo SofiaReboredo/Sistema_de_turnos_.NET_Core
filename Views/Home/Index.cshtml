@@ -5,7 +5,7 @@
 <br>
 <br>
 <div class="row">
-  <div class="col s12 m4">
+  <div class="col s12 m3">
     <div class="card">
       <div class="card-image center orange">
         <i class="material-icons large white-text">medical_services</i>
@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-  <div class="col s12 m4">
+  <div class="col s12 m3">
     <div class="card">
       <div class="card-image center blue darken-1">
         <i class="material-icons large white-text">assignment_ind</i>
@@ -42,7 +42,7 @@
       </div>
     </div>
   </div>
-  <div class="col s12 m4">
+  <div class="col s12 m3">
     <div class="card">
       <div class="card-image center green accent-4">
         <i class="material-icons large white-text">person_add</i>
@@ -59,6 +59,26 @@
       </div>
       <div class="card-action blue-grey darken-3">
         <a asp-controller="Paciente" asp-action="Index">Ver más</a>
+      </div>
+    </div>
+  </div>
+   <div class="col s12 m3">
+    <div class="card">
+      <div class="card-image center yellow lighten-1">
+        <i class="material-icons large white-text">assignment_turned_in</i>
+        <a class="btn-floating halfway-fab waves-effect waves-light red" asp-controller="Turno"
+          asp-action="Create"><i class="material-icons">add</i></a>
+      </div>
+      <div class="card-content">
+        <span class="card-title">Turnos</span>
+        <p>Aquí podrás dar de alta turnos médicos, modificarlos o eliminarlos.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="card-action blue-grey darken-3">
+        <a asp-controller="Turno" asp-action="Index">Asignar turno</a>
       </div>
     </div>
   </div>
