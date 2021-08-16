@@ -31,5 +31,6 @@ namespace Turnos.Models
         public DateTime HorarioAtencionHasta { get; set; }
         [Required(ErrorMessage = "Debe ingresar una especialidad")]
         public List<MedicoEspecialidad> MedicoEspecialidad { get; set; }
+        public List<Turno> Turno {get; set;}
     }
 }

@@ -15,8 +15,39 @@ namespace Turnos.Models
         public DbSet<Paciente> Paciente { get; set; }
         public DbSet<Medico> Medico { get; set; }
         public DbSet<MedicoEspecialidad> MedicoEspecialidad { get; set; }
+        public DbSet<Turno> Turno {get; set;}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
          {
+              modelBuilder.Entity<Turno>(entidad =>
+                 {
+                    entidad.ToTable("Turno");
+                    entidad.HasKey(t => t.IdTurno);
+
+                    entidad.Property(t => t.IdPaciente)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                    entidad.Property(t => t.IdMedico)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                    entidad.Property(t => t.FechaHoraInicio)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                    entidad.Property(t => t.FechaHoraFin)
+                    .IsRequired()
+                    .IsUnicode(false);
+                });
+
+                modelBuilder.Entity<Turno>().HasOne(x => x.Paciente)
+                .WithMany(p => p.Turno)
+                .HasForeignKey(p => p.IdPaciente);
+
+                modelBuilder.Entity<Turno>().HasOne(x => x.Medico)
+                .WithMany(m => m.Turno)
+                .HasForeignKey(m => m.IdMedico);
+
              modelBuilder.Entity<Especialidad>(entidad =>
                 {
                   entidad.ToTable("Especialidad");
