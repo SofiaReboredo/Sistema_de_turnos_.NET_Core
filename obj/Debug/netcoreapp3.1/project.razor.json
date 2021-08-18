@@ -14407,11 +14407,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Turnos\\Views\\Turno\\Details.cshtml",
-      "TargetPath": "Views\\Turno\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Turnos\\Views\\Especialidad\\Edit.cshtml",
       "TargetPath": "Views\\Especialidad\\Edit.cshtml",
       "FileKind": "mvc"
@@ -14439,11 +14434,6 @@
     {
       "FilePath": "c:\\Turnos\\Views\\Paciente\\Details.cshtml",
       "TargetPath": "Views\\Paciente\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Turnos\\Views\\Turno\\Delete.cshtml",
-      "TargetPath": "Views\\Turno\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14489,16 +14479,6 @@
     {
       "FilePath": "c:\\Turnos\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Turnos\\Views\\Turno\\Edit.cshtml",
-      "TargetPath": "Views\\Turno\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Turnos\\Views\\Turno\\Create.cshtml",
-      "TargetPath": "Views\\Turno\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
