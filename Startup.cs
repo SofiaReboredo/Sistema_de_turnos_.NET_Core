@@ -25,6 +25,11 @@ namespace Turnos
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(options =>
+            {
+             options.IdleTimeout = TimeSpan.FromSeconds(300);
+             options.Cookie.HttpOnly = true;   
+            });
             services.AddControllersWithViews();
             services.AddDbContext<TurnosContext>(opciones => opciones.UseSqlServer(Configuration.GetConnectionString("TurnosContext")));
         }
@@ -45,6 +50,8 @@ namespace Turnos
            // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
+            
             app.UseRouting();
 
             app.UseAuthorization();
@@ -53,7 +60,7 @@ namespace Turnos
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
             });
         }
     }
