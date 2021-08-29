@@ -42,6 +42,7 @@ namespace Turnos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public JsonResult GrabarTurno(Turno turno)
         {
             var ok = false;
@@ -60,6 +61,7 @@ namespace Turnos.Controllers
         }
         
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public JsonResult EliminarTurno(int idTurno)
         {
             var ok = false;
