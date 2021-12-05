@@ -14452,8 +14452,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Turnos\\Views\\Login\\index.cshtml",
-      "TargetPath": "Views\\Login\\index.cshtml",
+      "FilePath": "c:\\Turnos\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
